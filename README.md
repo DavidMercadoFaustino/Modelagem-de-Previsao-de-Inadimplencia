@@ -1,2 +1,2 @@
-# Modelagem-de-Risco-de-Cr-dito-Previs-o-de-Inadimpl-ncia-na-Home-Credit
-Desenvolver um modelo de Machine Learning capaz de prever a probabilidade de um cliente entrar em default com base em suas informações financeiras e demográficas.
+# Modelagem de Risco de Crédito Previsão de Inadimplência na Home Credit
+Desenvolver um modelo de Machine Learning capaz de prever a probabilidade de um cliente entrar em default com base em suas informações financeiras e demográficas. O modelo deve ajudar a Home Credit a reduzir suas perdas e a otimizar a concessão de crédito, garantindo que empréstimos sejam oferecidos a clientes com maior probabilidade de pagamento, sem deixar de fora bons clientes.
