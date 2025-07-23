@@ -20,7 +20,8 @@ Esta seção detalha as etapas cruciais de limpeza, transformação e preparaç�
 ### 1. Visão Geral do Dataset Principal (`application_train.csv`)
 * **Carregamento e Primeiras Observações:** Iniciamos carregando `application_train.csv` e explorando suas estatísticas descritivas (`.describe()`). Identificamos o volume de dados (aproximadamente 307 mil entradas) e uma visão inicial das distribuições das variáveis numéricas.
 * **Distribuição da Variável Target (`TARGET`):** Visualizamos a distribuição da variável alvo, `TARGET`, que indica a inadimplência (1) ou não (0). Confirmamos que o dataset é **altamente desbalanceado**, com aproximadamente 8% de casos de inadimplência, o que é um desafio comum em problemas de risco de crédito e requer atenção especial nas etapas de modelagem e avaliação.
-    * **[Imagem: `Modelagem-de-Previsao-de-Inadimplencia/Graficos/target_distribution_by_contract_type.png`]** (Gráfico da distribuição geral da TARGET)
+![Distribuição da TARGET por tipo de contrato](../Graficos/target_distribution_by_contract_type.png) (Gráfico da distribuição geral da TARGET)
+
     * **[Imagem: `imagens/target_distribution_by_contract_type.png`]** (Gráfico da distribuição da TARGET por tipo de contrato, mostrando diferenças no risco entre 'Cash loans' e 'Revolving loans').
 * **Identificação de Valores Ausentes (Missing Values):** Realizamos uma análise detalhada dos valores ausentes por coluna, calculando tanto a contagem quanto a porcentagem. Notamos a presença significativa de `NaN`s, especialmente em colunas relacionadas a detalhes imobiliários (ex: `COMMONAREA_AVG`, `YEARS_BUILD_AVG`) com até ~70% de dados faltantes, e `OWN_CAR_AGE` com ~66% de `NaN`s.
     * **Observação Crucial:** A presença de valores ausentes em muitas colunas não era aleatória, mas sim **informativa**, como demonstramos em análises posteriores.
