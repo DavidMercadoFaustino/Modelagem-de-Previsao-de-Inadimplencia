@@ -42,11 +42,15 @@ Esta seção detalha as etapas cruciais de limpeza, transformação e preparaç�
    **Distribuição de Valores Ausentes por Severidade**  
 
 | Categoria          | Qtd Colunas | % do Total | 
-|--------------------|-------------|------------|
+|--------------------|     :---:   |------------|
 | 🔴 **Crítico**     | 41          | 59.42%    | 
 | 🟠 Alto           | 18          | 26.09%     | 
 | 🟡 Moderado       | 0           | 0.00%      | 
 | 🟢 Aceitável      | 10          | 14.49%     | 
+
+**Legenda de Severidade:**  
+🔴 >50% Missing Values (Crítico) | 🟠 10-50% Missing Values (Alto) | 🟡 1-10% Missing Values (Moderado) | 🟢 <1% Missing Values (Aceitável)
+
 
 ![Distribuição das missing values por categoria](../Graficos/missing_values_category_counts_bar_plot.png) (Gráfico da distribuição das missing values)
 
