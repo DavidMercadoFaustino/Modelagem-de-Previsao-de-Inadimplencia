@@ -23,7 +23,40 @@ Esta seção detalha as etapas cruciais de limpeza, transformação e preparaç�
 ![Distribuição da TARGET por tipo de contrato](../Graficos/target_distribution_by_contract_type.png) (Gráfico da distribuição da TARGET por tipo de contrato, mostrando diferenças no risco entre 'Cash loans' e 'Revolving loans')
 
 ![Distribuição da TARGET por genero](../Graficos/target_distribution_by_gender.png) (Gráfico da distribuição da TARGET por genero, mostrando que homens são mais tomadores de credito que mulheres mas na proporção de maus pagadores tambem se mantém)
-* **Identificação de Valores Ausentes (Missing Values):** Realizamos uma análise detalhada dos valores ausentes por coluna, calculando tanto a contagem quanto a porcentagem. Notamos a presença significativa de `NaN`s, especialmente em colunas relacionadas a detalhes imobiliários (ex: `COMMONAREA_AVG`, `YEARS_BUILD_AVG`) com até ~70% de dados faltantes, e `OWN_CAR_AGE` com ~66% de `NaN`s.
-    * **Observação Crucial:** A presença de valores ausentes em muitas colunas não era aleatória, mas sim **informativa**, como demonstramos em análises posteriores.
+
+* **Dados Anaomalos:** A coluna `DAYS_EMPLOYED` (dias de emprego) apresentou um valor anômalo de `365243`, representando um período irrealista (quase 1000 anos). Essa anomalia, presente em aproximadamente 18% dos dados, é comumente interpretada como um indicador de desemprego.
+
+|  Estatística   | DAYS_EMPLOYED      |
+|---------------|--------------------|
+| count         | 307,511.00         |
+| mean          | 63,815.05          |
+| std           | 141,275.77         |
+| min           | -17,912.00         |
+| 25%           | -2,760.00          |
+| 50% (mediana) | -1,213.00          |
+| 75%           | -289.00            |
+| max           | **365,243.00**         |
+
+* **Identificação de Valores Ausentes (Missing Values):** O dataset apresenta 69 variáveis com dados ausentes, exibindo uma distribuição heterogênea que varia desde níveis críticos (69,87% de missing values) até valores residuais (0,00033% de registros incompletos).
+
+   **Distribuição de Valores Ausentes por Severidade**  
+
+| Categoria          | Qtd Colunas | % do Total | 
+|--------------------|-------------|------------|
+| 🔴 **Crítico**     | 41          | 59.42%    | 
+| 🟠 Alto           | 18          | 26.09%     | 
+| 🟡 Moderado       | 0           | 0.00%      | 
+| 🟢 Aceitável      | 10          | 14.49%     | 
+
+![Distribuição das missing values por categoria](../Graficos/missing_values_category_counts_bar_plot.png) (Gráfico da distribuição das missing values)
+
+. **Polarização de Dados**  
+   - 85% das colunas problemáticas (🔴+🟠) concentram-se em 2 domínios:  
+     • Métricas imobiliárias (72%)  
+     • Histórico creditício (28%)
+     
+![Distribuição das missing values por coluna](../Graficos/missing_values_categorized_bar_plot.png) (Gráfico da distribuição das colunas e seus missing values)
+
+ * **Observação Crucial:** A presença de valores ausentes em muitas colunas não era aleatória, mas sim **informativa**, como demonstramos em análises posteriores.
 * **Análise de Tipos de Dados:** Identificamos os tipos de dados de cada coluna (`int64`, `float64`, `object`), essencial para planejar as etapas de pré-processamento e codificação.
 
