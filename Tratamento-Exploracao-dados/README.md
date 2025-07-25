@@ -61,5 +61,4 @@ Esta seção detalha as etapas cruciais de limpeza, transformação e preparaç�
      
 ![Distribuição das missing values por coluna](../Graficos/missing_values_categorized_bar_plot.png) (Gráfico da distribuição das colunas e seus missing values)
 
-
-
+**OWN_CAR_AGE:** Essa coluna tem mais de 65% de valores ausentes. É natural que essa informação só exista para clientes que possuem um carro. Quem não tem carro, não tem "idade do carro", resultando em um missing value.
