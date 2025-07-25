@@ -61,4 +61,48 @@ Esta seção detalha as etapas cruciais de limpeza, transformação e preparaç�
      
 ![Distribuição das missing values por coluna](../Graficos/missing_values_categorized_bar_plot.png) (Gráfico da distribuição das colunas e seus missing values)
 
-**OWN_CAR_AGE:** Essa coluna tem mais de 65% de valores ausentes. É natural que essa informação só exista para clientes que possuem um carro. Quem não tem carro, não tem "idade do carro", resultando em um missing value.
+* **Analise dos Valores Faltantes:** Primeira analise foi verificar se caso existia algum padrão no valor faltante de acordo com as caracteristicas dadas. Então observando as que mais tem dados faltantes é relacionada a métricas imobiliaria e a idade do carro, esses valores faltantes poderiam estar faltando por conta do devedor não possuir o bem.
+  * **OWN_CAR_AGE:**
+     
+      Contagem de 'FLAG_OWN_CAR' quando 'OWN_CAR_AGE' é nulo:
+      |FLAG_OWN_CAR|QTD|
+      |:---:|:---:|
+      |N| 202924|
+      |Y| 5|
+
+
+      Contagem de 'FLAG_OWN_CAR' quando 'OWN_CAR_AGE' NÃO é nulo:
+      |FLAG_OWN_CAR|QTD|
+      |:---:|:---:|
+      |N| 0|
+      |Y| 104582|
+    
+  * **COMMONAREA_AVG:**
+
+     Contagem de 'FLAG_OWN_REALTY' quando 'COMMONAREA_AVG' é nulo:
+      |FLAG_OWN_REALTY|QTD|
+      |:---:|:---:|
+      |N| 66875|
+      |Y| 147990|
+
+    Contagem de 'FLAG_OWN_REALTY' quando 'COMMONAREA_AVG' NÃO é nulo:
+      |FLAG_OWN_REALTY|QTD|
+      |:---:|:---:|
+      |N| 27324|
+      |Y| 65322|
+
+  * **FLOORSMIN_AVG:**
+
+     Contagem de 'FLAG_OWN_REALTY' quando 'FLOORSMIN_AVG' é nulo:
+      |FLAG_OWN_REALTY|QTD|
+      |:---:|:---:|
+      |N| 64982|
+      |Y| 143660|
+
+
+    Contagem de 'FLAG_OWN_REALTY' quando 'FLOORSMIN_AVG' NÃO é nulo:
+      |FLAG_OWN_REALTY|QTD|
+      |:---:|:---:|
+      |N| 29217|
+      |Y| 69652|
+    
