@@ -61,6 +61,5 @@ Esta seção detalha as etapas cruciais de limpeza, transformação e preparaç�
      
 ![Distribuição das missing values por coluna](../Graficos/missing_values_categorized_bar_plot.png) (Gráfico da distribuição das colunas e seus missing values)
 
- * **Observação Crucial:** A presença de valores ausentes em muitas colunas não era aleatória, mas sim **informativa**, como demonstramos em análises posteriores.
-* **Análise de Tipos de Dados:** Identificamos os tipos de dados de cada coluna (`int64`, `float64`, `object`), essencial para planejar as etapas de pré-processamento e codificação.
+
 
