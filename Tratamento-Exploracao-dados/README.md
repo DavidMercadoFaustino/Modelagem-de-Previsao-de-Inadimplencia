@@ -117,7 +117,8 @@ Esta seção detalha as etapas cruciais de limpeza, transformação e preparaç�
 A implementação de MICE(Multiple Imputation by Chained Equations), embora poderosa, é mais complexa e computacionalmente intensiva do que imputações simples. Ela é tipicamente feita com bibliotecas do sklearn.impute.IterativeImputer que implementa MICE. 
 
 **Estratégia de manipulação**
-    * **Imputação por Média/Mediana/Moda:** São úteis e simples para MCAR, mas podem introduzir viés significativo para MAR e MNAR, pois não consideram as relações entre as variáveis ou o motivo da ausência.
+    
+  * **Imputação por Média/Mediana/Moda:** São úteis e simples para MCAR, mas podem introduzir viés significativo para MAR e MNAR, pois não consideram as relações entre as variáveis ou o motivo da ausência.
 
    * **MICE (IterativeImputer):** É o método preferível para MAR porque ele explicitamente modela a relação entre a ausência e as variáveis observadas. Para MNAR, ele oferece uma melhoria substancial sobre as imputações simples ao usar as relações entre as variáveis observadas para fazer inferências mais educadas sobre os valores ausentes, mesmo que não resolva o problema do MNAR em sua totalidade.
 
