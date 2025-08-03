@@ -18,6 +18,14 @@ O esquema de relacionamento pode ser visualizado da seguinte forma:
     │  
     └── **df_bureau_balance**  
         → Chave Estrangeira: `SK_ID_BUREAU` (link com `df_bureau`)
+![Distribuição de Status de Crédito no Bureau](../Graficos/bureau_credit_active_distribution.png) 
+
+(Gráfico da distribuição do status do crédito em Fechado, ativo e vendido)
+
+![Distribuição do Atraso médio de Pagamentos(DPD) vs. Inadimplência](../Graficos/bureau_dpd_vs_target_violin.png) 
+
+(Gráfico de violino do atraso médio entre as adimplências)
+
 
 ├── **df_previous_application**  
     → Chave Primária: `SK_ID_PREV`  
